@@ -1,0 +1,1 @@
+# tools/spotify_playlists/ — lists Sir's Spotify playlists (read-only).

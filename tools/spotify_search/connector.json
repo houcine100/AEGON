@@ -1,0 +1,12 @@
+{
+  "name": "spotify_search",
+  "version": "1.0.0",
+  "description": "Search Spotify to FIND or look up songs WITHOUT playing them. Use only when Sir asks to find, search, or look up a track — never to play one (use spotify_play to play).",
+  "permission_level": "read_only",
+  "enabled": true,
+  "response_style": "summarize",
+  "entry_point": "tools.spotify_search.spotify_search_tool.SpotifySearchConnector",
+  "input_schema": {
+    "query": {"type": "string", "required": true, "description": "Spotify search query, e.g. 'bohemian rhapsody' or 'daft punk'."}
+  }
+}

@@ -1,0 +1,1 @@
+# tools/spotify_control/ — Spotify playback control connector (always gated).

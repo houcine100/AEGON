@@ -1,0 +1,16 @@
+{
+  "name": "gmail_read",
+  "version": "1.2.0",
+  "description": "Reads recent or matching emails from Gmail — sender, subject, date, and a short preview. Read-only. Use to check the inbox, search emails, or see recent messages. Pass a message_id to read one full message, or a position to read one from the last list Aegon showed.",
+  "permission_level": "read_only",
+  "enabled": true,
+  "response_style": "verbatim",
+  "redact_log": true,
+  "entry_point": "tools.gmail_read.gmail_read_tool.GmailReadConnector",
+  "input_schema": {
+    "query": {"type": "string", "required": false, "description": "Optional Gmail search query, e.g. 'from:john', 'is:unread'. Empty for recent emails."},
+    "max_results": {"type": "integer", "required": false, "description": "How many emails to list (default 5, max 20)."},
+    "message_id": {"type": "string", "required": false, "description": "If set, reads the full body of this one message instead of listing."},
+    "position": {"type": "integer", "required": false, "description": "1-based position referring to the last email list Aegon showed. Use this when Sir says 'read the first email', 'who is the second from', etc."}
+  }
+}

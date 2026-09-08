@@ -1,0 +1,13 @@
+{
+  "name": "file_write",
+  "version": "1.0.0",
+  "description": "Writes text to a file in an allowed folder. Requires Sir's approval.",
+  "permission_level": "write_gated",
+  "enabled": true,
+  "response_style": "confirm",
+  "entry_point": "tools.file_write.file_write_tool.FileWriteConnector",
+  "input_schema": {
+    "path": {"type": "string", "required": true, "description": "Full path of the file to write. Must be in an allowed folder."},
+    "content": {"type": "string", "required": true, "description": "The text to write into the file."}
+  }
+}

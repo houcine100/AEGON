@@ -1,0 +1,12 @@
+{
+  "name": "file_read",
+  "version": "1.0.0",
+  "description": "Reads a text file from an allowed folder on the local machine.",
+  "permission_level": "read_only",
+  "enabled": true,
+  "response_style": "raw",
+  "entry_point": "tools.file_read.file_read_tool.FileReadConnector",
+  "input_schema": {
+    "path": {"type": "string", "required": true, "description": "Full path of the file to read. Must be in an allowed folder."}
+  }
+}

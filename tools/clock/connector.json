@@ -1,0 +1,13 @@
+{
+  "name": "clock",
+  "version": "1.0.0",
+  "description": "Tells the current local time. Use when Sir asks what time it is or for the current date/time.",
+  "permission_level": "read_only",
+  "enabled": true,
+  "response_style": "verbatim",
+  "entry_point": "tools.clock.clock_tool.ClockConnector",
+  "input_schema": {
+    "timezone": {"type": "string", "required": false, "description": "Optional IANA timezone, e.g. 'Africa/Tunis'. Omit to auto-detect from the machine's location."},
+    "aspect": {"type": "string", "required": false, "description": "What Sir asked for: 'time' if he asks the time, 'date' if he asks the day or date, 'datetime' for both."}
+  }
+}

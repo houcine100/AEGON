@@ -1,0 +1,13 @@
+{
+  "name": "obsidian_create",
+  "version": "1.0.0",
+  "description": "Creates a new Obsidian note with a given title and content. Use for: 'create a note called Meeting Ideas', 'save this as an Obsidian note', 'make a new note titled X'. Will NOT overwrite an existing note.",
+  "permission_level": "write_gated",
+  "enabled": true,
+  "response_style": "verbatim",
+  "entry_point": "tools.obsidian_create.obsidian_create_tool.ObsidianCreateConnector",
+  "input_schema": {
+    "title": {"type": "string", "required": true, "description": "The note title (used as filename)."},
+    "content": {"type": "string", "required": true, "description": "The markdown content to write into the note."}
+  }
+}

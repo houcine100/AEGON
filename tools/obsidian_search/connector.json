@@ -1,0 +1,12 @@
+{
+  "name": "obsidian_search",
+  "version": "1.0.0",
+  "description": "Searches Sir's Obsidian notes for a keyword or phrase. Use for: 'search my notes for LangGraph', 'find notes about PostgreSQL', 'search for project ideas', 'do I have any notes on X'.",
+  "permission_level": "read_only",
+  "enabled": true,
+  "response_style": "verbatim",
+  "entry_point": "tools.obsidian_search.obsidian_search_tool.ObsidianSearchConnector",
+  "input_schema": {
+    "query": {"type": "string", "required": true, "description": "The keyword or phrase to search for in notes."}
+  }
+}

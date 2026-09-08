@@ -1,0 +1,1 @@
+# tools/connector_creator/ — scaffolds new connector folders.

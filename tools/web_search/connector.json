@@ -1,0 +1,13 @@
+{
+  "name": "web_search",
+  "version": "1.0.0",
+  "description": "Searches the web with DuckDuckGo and returns results (title, link, snippet).",
+  "permission_level": "read_only",
+  "enabled": true,
+  "response_style": "summarize",
+  "entry_point": "tools.web_search.web_search_tool.WebSearchConnector",
+  "input_schema": {
+    "query": {"type": "string", "required": true, "description": "What to search the web for."},
+    "max_results": {"type": "integer", "required": false, "description": "How many results to return. Default 5."}
+  }
+}

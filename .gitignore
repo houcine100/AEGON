@@ -1,0 +1,36 @@
+# Environments
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# IDE
+.idea/
+
+# Secrets & tokens — never commit
+.env
+.env.*
+core/security/tokens/
+core/security/gmail_client_secret.json
+*.token
+*.pem
+*_key.json
+
+# Vault — personal notes, Axiom 2 (memory privacy)
+vault/
+
+# Local workspace scratch files
+workspace/
+
+# Crash dumps
+*.stackdump
+
+# Nested tool repo, not Aegon source
+agent-skills/
+
+# Unrelated large binaries dropped in root
+*.pdf
+
+# DB sync state (local timestamp, not code)
+core/memory/.vault_sync_ts

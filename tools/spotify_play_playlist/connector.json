@@ -1,0 +1,12 @@
+{
+  "name": "spotify_play_playlist",
+  "version": "1.0.0",
+  "description": "Play one of Sir's own playlists by name (starts playback on the active device). Use when Sir asks to play a playlist, e.g. 'play my playlist My Shazam Tracks'. Always asks first.",
+  "permission_level": "always_gated",
+  "enabled": true,
+  "response_style": "confirm",
+  "entry_point": "tools.spotify_play_playlist.spotify_play_playlist_tool.SpotifyPlayPlaylistConnector",
+  "input_schema": {
+    "name": {"type": "string", "required": true, "description": "The exact or partial name of Sir's playlist, e.g. 'My Shazam Tracks'."}
+  }
+}

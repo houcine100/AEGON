@@ -1,0 +1,12 @@
+{
+  "name": "alarm",
+  "version": "1.0.0",
+  "description": "ageon wake me up on a specific time that i set up",
+  "domain": "productivity",
+  "mechanism": "connector",
+  "permission_level": "read_only",
+  "enabled": false,
+  "response_style": "verbatim",
+  "entry_point": "tools.alarm.alarm_tool.AlarmConnector",
+  "input_schema": {}
+}

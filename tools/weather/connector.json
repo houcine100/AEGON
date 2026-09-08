@@ -1,0 +1,12 @@
+{
+  "name": "weather",
+  "version": "1.0.0",
+  "description": "Gets the current weather and today's forecast from wttr.in. Use for any weather question.",
+  "permission_level": "read_only",
+  "enabled": true,
+  "response_style": "verbatim",
+  "entry_point": "tools.weather.weather_tool.WeatherConnector",
+  "input_schema": {
+    "location": {"type": "string", "required": false, "description": "City or place name. If omitted, detected from IP."}
+  }
+}

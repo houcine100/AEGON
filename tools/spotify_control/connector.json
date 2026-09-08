@@ -1,0 +1,12 @@
+{
+  "name": "spotify_control",
+  "version": "1.0.0",
+  "description": "Control Spotify playback — pause, resume, skip to next, or go to previous track. Use when Sir asks to pause, resume, stop, play (resume), skip, or go back on Spotify.",
+  "permission_level": "always_gated",
+  "enabled": true,
+  "response_style": "confirm",
+  "entry_point": "tools.spotify_control.spotify_control_tool.SpotifyControlConnector",
+  "input_schema": {
+    "action": {"type": "string", "required": true, "description": "One of: pause, resume, next (skip), previous."}
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "spotify_playlists",
+  "version": "1.0.0",
+  "description": "List Sir's own Spotify playlists. Use when Sir asks what playlists he has, or to list/show his playlists.",
+  "permission_level": "read_only",
+  "enabled": true,
+  "response_style": "summarize",
+  "entry_point": "tools.spotify_playlists.spotify_playlists_tool.SpotifyPlaylistsConnector",
+  "input_schema": {}
+}

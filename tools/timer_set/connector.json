@@ -1,0 +1,15 @@
+{
+  "name": "timer_set",
+  "version": "1.0.0",
+  "description": "Sets a short in-memory timer that speaks aloud when it fires. Use for transient 'remind me to X in N minutes' tasks that must NOT go in the calendar: 'remind me to turn off the oven in 5 minutes', 'in 10 minutes tell me to check the pasta', 'set a timer for 20 minutes'. The timer lives only while Aegon is running and is never saved. NOT for appointments or dated events — those use reminder_set.",
+  "domain": "productivity",
+  "mechanism": "connector",
+  "permission_level": "read_only",
+  "enabled": true,
+  "response_style": "verbatim",
+  "entry_point": "tools.timer_set.timer_set_tool.TimerSetConnector",
+  "input_schema": {
+    "message": {"type": "string", "required": true, "description": "What Sir wants to be reminded of when the timer fires."},
+    "when": {"type": "string", "required": true, "description": "Short relative fuse: 'in 5 minutes', '20 minutes', 'in half an hour'."}
+  }
+}

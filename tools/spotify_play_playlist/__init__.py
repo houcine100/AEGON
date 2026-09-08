@@ -1,0 +1,1 @@
+# tools/spotify_play_playlist/ — plays a named playlist (always gated).

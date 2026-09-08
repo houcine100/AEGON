@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(./.venv/Scripts/python.exe -m pytest \"tests/test_intent_routing_f2.py::TestRegression::test_conversation\" \"tests/test_intent_routing_f2.py::TestUnpunctuated::test_whats_the_weather\" -q)",
+      "Bash(./.venv/Scripts/python.exe -m pytest tests/test_memory_delete_hardening.py -v)",
+      "Bash(./.venv/Scripts/python.exe -m pytest tests/test_f9_delete_confirmation.py tests/test_memory_delete_hardening.py -q)",
+      "Bash(./.venv/Scripts/python.exe -c \"from tools import tool_registry; print\\(tool_registry.list_tools\\(\\)\\)\")",
+      "Bash(./.venv/Scripts/python.exe -c ' *)",
+      "Bash(./.venv/Scripts/python.exe -m pytest tests/test_memory_recall.py tests/test_context_relevance.py tests/test_note_remember.py tests/test_f9_delete_confirmation.py tests/test_memory_delete_hardening.py -q)",
+      "Bash(ps -W)",
+      "Bash(ls .venv\\\\\\\\Scripts)",
+      "Bash(grep -iE '\\\\.dist-info$')",
+      "PowerShell($shell = New-Object -ComObject Shell.Application; $recycle = $shell.Namespace\\(10\\); $items = $recycle.Items\\(\\); \"Count: $\\($items.Count\\)\"; $items | Select-Object -First 40 Name)",
+      "Bash(cd \"C:/Users/houci/Desktop/AI Projects/aegon\" && grep -rhE \"^\\\\s*\\(import|from\\) [a-zA-Z_][a-zA-Z0-9_.]*\" --include=\"*.py\" . 2>/dev/null | grep -v \".venv\" | sed -E 's/^\\\\s*\\(import|from\\)\\\\s+\\([a-zA-Z0-9_]+\\).*/\\\\2/' | sort -u > /tmp/imports_raw.txt; wc -l /tmp/imports_raw.txt)",
+      "WebFetch(domain:build.nvidia.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "PowerShell($names = @\\(\"OPENROUTER_API_KEY\",\"NVIDIA_TTS_API_KEY\",\"NVIDIA_STT_API_KEY\",\"AEGON_TOKEN_KEY\",\"AEGON_ENCRYPTION_KEY\",\"AEGON_DB_PASSWORD\"\\); foreach \\($n in $names\\) { $v = [Environment]::GetEnvironmentVariable\\($n,\"User\"\\); if \\($v\\) { \"{0,-22} SET   len={1}  starts={2}\" -f $n, $v.Length, $v.Substring\\(0,[Math]::Min\\(6,$v.Length\\)\\) } else { \"{0,-22} MISSING\" -f $n } })",
+      "PowerShell($v = [Environment]::GetEnvironmentVariable\\(\"OPENROUTER_API_KEY\",\"User\"\\); $masked = $v -replace '\\(sk-or-v1-\\)[A-Za-z0-9]+', '$1<REDACTED>'; \"Stored value \\(key masked\\):\"; $masked)",
+      "PowerShell(.\\\\.venv\\\\Scripts\\\\python.exe -c \"import mcp_server_time; print\\('mcp_server_time: INSTALLED'\\)\" 2>&1)",
+      "PowerShell(.\\\\.venv\\\\Scripts\\\\python.exe -c \"from tools.clock.clock_tool import ClockConnector; print\\(ClockConnector\\(\\).execute\\({}\\)\\)\")",
+      "PowerShell(.\\\\.venv\\\\Scripts\\\\python.exe -c \"import psycopg2; print\\('psycopg2 importable, version:', psycopg2.__version__\\)\" 2>&1)",
+      "PowerShell(\"--- dist-info present? ---\")",
+      "WebFetch(domain:developer.spotify.com)"
+    ]
+  }
+}

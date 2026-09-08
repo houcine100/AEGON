@@ -1,0 +1,13 @@
+{
+  "name": "obsidian_append",
+  "version": "1.0.0",
+  "description": "Appends or writes text to an existing Obsidian note. Use for: 'add this to my Aegon journal', 'append this idea to project notes', 'add a line to my note called X', 'write in the note X', 'write to note X', 'put this in my note X'. Never overwrites existing content.",
+  "permission_level": "write_gated",
+  "enabled": true,
+  "response_style": "verbatim",
+  "entry_point": "tools.obsidian_append.obsidian_append_tool.ObsidianAppendConnector",
+  "input_schema": {
+    "title": {"type": "string", "required": true, "description": "The title of the note to append to."},
+    "content": {"type": "string", "required": true, "description": "The text to append to the note."}
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "obsidian_read",
+  "version": "1.0.0",
+  "description": "Reads the full content of a specific Obsidian note by title. Use for: 'open note Aegon Architecture', 'read my LangGraph note', 'show me the note called Meeting Ideas'.",
+  "permission_level": "read_only",
+  "enabled": true,
+  "response_style": "verbatim",
+  "entry_point": "tools.obsidian_read.obsidian_read_tool.ObsidianReadConnector",
+  "input_schema": {
+    "title": {"type": "string", "required": true, "description": "The title (filename without .md) of the note to read."}
+  }
+}

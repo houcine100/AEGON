@@ -1,0 +1,45 @@
+# Reconstructed 2026-08-06 after .venv loss (no lockfile existed).
+# Derived from AST-parsed imports across the live codebase — not guessed.
+
+# --- orchestration ---
+langgraph
+langgraph-checkpoint-postgres
+ollama
+# Pinned <2.0: mcp 2.0 renamed McpError -> MCPError, which breaks mcp-server-time
+# (still unfixed at its latest release, 2026.7.10). Unpin once that lands.
+mcp<2.0
+# Spawned as a subprocess by the clock connector (`python -m mcp_server_time`),
+# never imported — easy to miss when regenerating this file from imports alone.
+mcp-server-time
+
+# --- memory / db ---
+psycopg[binary]
+psycopg2-binary
+pgvector
+sentence-transformers
+numpy
+
+# --- voice (STT/TTS) ---
+# torch: CPU-only is enough — the only local model left is silero-vad's
+# real-time VAD, which doesn't need CUDA. STT/TTS both moved to NVIDIA-hosted APIs.
+torch
+silero-vad
+sounddevice
+pyaudio
+nvidia-riva-client
+
+# --- connectors ---
+google-api-python-client
+google-auth-oauthlib
+spotipy
+feedparser
+dateparser
+ddgs
+
+# --- core / infra ---
+cryptography
+requests
+typing_extensions
+
+# --- tests ---
+pytest

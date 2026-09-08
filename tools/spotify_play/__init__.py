@@ -1,0 +1,1 @@
+# tools/spotify_play/ — Spotify play-a-named-track connector (always gated).

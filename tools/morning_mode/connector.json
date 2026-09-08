@@ -1,0 +1,10 @@
+{
+  "name": "morning_mode",
+  "version": "1.0.0",
+  "description": "Full morning briefing: current time, weather, today's calendar, and top news headlines. Use for 'good morning', 'morning briefing', 'what's my morning', 'start my day'.",
+  "permission_level": "read_only",
+  "enabled": true,
+  "response_style": "verbatim",
+  "entry_point": "tools.morning_mode.morning_mode_tool.MorningModeConnector",
+  "input_schema": {}
+}

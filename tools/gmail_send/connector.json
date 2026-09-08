@@ -1,0 +1,14 @@
+{
+  "name": "gmail_send",
+  "version": "1.0.0",
+  "description": "Sends an email from the user's Gmail. ALWAYS requires approval. Use ONLY when Sir directly asks to send an email. Input: to (recipient), subject, body.",
+  "permission_level": "always_gated",
+  "enabled": true,
+  "response_style": "confirm",
+  "entry_point": "tools.gmail_send.gmail_send_tool.GmailSendConnector",
+  "input_schema": {
+    "to": {"type": "string", "required": true, "description": "Recipient email address."},
+    "subject": {"type": "string", "required": false, "description": "Email subject line."},
+    "body": {"type": "string", "required": true, "description": "Email body text."}
+  }
+}

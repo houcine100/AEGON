@@ -1,0 +1,12 @@
+{
+  "name": "calendar_read",
+  "version": "1.0.0",
+  "description": "Reads Sir's Google Calendar events (read-only). Use for any calendar, schedule, agenda, or meetings question, e.g. 'what's on my calendar', 'what's my schedule today', 'do I have meetings tomorrow', 'what's on this week'.",
+  "permission_level": "read_only",
+  "enabled": true,
+  "response_style": "verbatim",
+  "entry_point": "tools.calendar_read.calendar_read_tool.CalendarReadConnector",
+  "input_schema": {
+    "range": {"type": "string", "required": false, "description": "Which window to read: 'today' (default), 'tomorrow', or 'week'."}
+  }
+}

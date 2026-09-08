@@ -1,0 +1,1 @@
+# tools/ — Phase 5 MCP connector layer.

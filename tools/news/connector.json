@@ -1,0 +1,10 @@
+{
+  "name": "news",
+  "version": "1.0.0",
+  "description": "Fetches the top world headlines from the last 24 hours via RSS. Use for any question about news, current events, top stories, or what's happening in the world.",
+  "permission_level": "read_only",
+  "enabled": true,
+  "response_style": "verbatim",
+  "entry_point": "tools.news.news_tool.NewsConnector",
+  "input_schema": {}
+}

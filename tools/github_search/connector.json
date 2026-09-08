@@ -1,0 +1,12 @@
+{
+  "name": "github_search",
+  "version": "1.0.0",
+  "description": "Search GitHub for repositories by name, topic, language, or metadata. Use when Sir asks to find or look up a GitHub repository or project specifically on GitHub.",
+  "permission_level": "read_only",
+  "enabled": true,
+  "response_style": "summarize",
+  "entry_point": "tools.github_search.github_search_tool.GitHubSearchConnector",
+  "input_schema": {
+    "query": {"type": "string", "required": true, "description": "GitHub repository search query, e.g. 'machine learning language:python stars:>1000'."}
+  }
+}

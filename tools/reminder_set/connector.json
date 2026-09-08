@@ -1,0 +1,15 @@
+{
+  "name": "reminder_set",
+  "version": "1.0.0",
+  "description": "Sets a DURABLE reminder by creating a Google Calendar event that syncs to all Sir's devices and survives restarts. Use for appointments and dated events: 'remind me about my doctor appointment tomorrow at 3', 'set a reminder for the meeting Friday', 'remind me to call Mom tonight at 8'. For short transient timers that should NOT be saved ('turn off the oven in 5 minutes', 'set a timer for 20 minutes') use timer_set instead.",
+  "domain": "productivity",
+  "mechanism": "connector",
+  "permission_level": "write_gated",
+  "enabled": true,
+  "response_style": "verbatim",
+  "entry_point": "tools.reminder_set.reminder_set_tool.ReminderSetConnector",
+  "input_schema": {
+    "message": {"type": "string", "required": true, "description": "What Sir wants to be reminded of."},
+    "when": {"type": "string", "required": true, "description": "When to fire, in natural language: '6 PM', 'tomorrow at 9', 'in 30 minutes'."}
+  }
+}

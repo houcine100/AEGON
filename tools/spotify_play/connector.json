@@ -1,0 +1,12 @@
+{
+  "name": "spotify_play",
+  "version": "1.0.0",
+  "description": "Play a specific named song or artist on Spotify (starts playback on the active device). Use when Sir asks to PLAY a named song, e.g. 'play bohemian rhapsody'. Always asks first.",
+  "permission_level": "always_gated",
+  "enabled": true,
+  "response_style": "confirm",
+  "entry_point": "tools.spotify_play.spotify_play_tool.SpotifyPlayConnector",
+  "input_schema": {
+    "query": {"type": "string", "required": true, "description": "The song or artist to play, e.g. 'get lucky daft punk'."}
+  }
+}
